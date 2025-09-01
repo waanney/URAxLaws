@@ -1,14 +1,14 @@
 import os
 import re
 import json
-from lightrag import LightRAG, QueryParam
-from lightrag.llm.openai import openai_complete_if_cache, openai_embed
-from lightrag.utils import EmbeddingFunc, always_get_an_event_loop
+from uraxlaw import UraxLaw, QueryParam
+from uraxlaw.llm.openai import openai_complete_if_cache, openai_embed
+from uraxlaw.utils import EmbeddingFunc, always_get_an_event_loop
 import numpy as np
 
 
 ## For Upstage API
-# please check if embedding_dim=4096 in lightrag.py and llm.py in lightrag direcotry
+# please check if embedding_dim=4096 in uraxlaw.py and llm.py in uraxlaw direcotry
 async def llm_model_func(
     prompt, system_prompt=None, history_messages=[], **kwargs
 ) -> str:
@@ -88,8 +88,8 @@ if __name__ == "__main__":
     mode = "hybrid"
     WORKING_DIR = f"../{cls}"
 
-    rag = LightRAG(working_dir=WORKING_DIR)
-    rag = LightRAG(
+    rag = UraxLaw(working_dir=WORKING_DIR)
+    rag = UraxLaw(
         working_dir=WORKING_DIR,
         llm_model_func=llm_model_func,
         embedding_func=EmbeddingFunc(embedding_dim=4096, func=embedding_func),

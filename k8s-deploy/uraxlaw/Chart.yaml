@@ -1,0 +1,10 @@
+apiVersion: v2
+name: uraxlaw
+description: A Helm chart for UraxLaw , an efficient and lightweight RAG system
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Ura Team
+  - name: earayu
+    email: earayu@gmail.com
