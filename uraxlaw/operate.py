@@ -62,7 +62,7 @@ def chunking_by_token_size(
     tokenizer: Tokenizer,
     content: str,
     split_by_character: str | None = None,
-    split_by_character_only: bool = False,
+    split_by_character_only: bool = True,
     overlap_token_size: int = 128,
     max_token_size: int = 1024,
 ) -> list[dict[str, Any]]:
