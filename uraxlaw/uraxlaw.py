@@ -876,8 +876,7 @@ class UraxLaw:
 
         await self.apipeline_enqueue_documents(input, ids, file_paths, track_id)
         await self.apipeline_process_enqueue_documents(
-            split_by_character, split_by_character_only
-        )
+            split_by_character, split_by_character_only)
 
         return track_id
 
