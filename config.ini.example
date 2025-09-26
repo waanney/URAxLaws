@@ -12,7 +12,7 @@ keep_alive = true
 
 [mongodb]
 uri = mongodb+srv://name:password@your-cluster-address
-database = lightrag
+database = uraxlaw 
 
 [redis]
 uri=redis://localhost:6379/1

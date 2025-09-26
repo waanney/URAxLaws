@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source /home/netman/uraxlaw-xyj/venv/bin/activate
+uraxlaw-server

@@ -3,8 +3,8 @@ import json
 import time
 import asyncio
 
-from lightrag import LightRAG
-from lightrag.kg.shared_storage import initialize_pipeline_status
+from uraxlaw import UraxLaw
+from uraxlaw.kg.shared_storage import initialize_pipeline_status
 
 
 def insert_text(rag, file_path):
@@ -33,7 +33,7 @@ if not os.path.exists(WORKING_DIR):
 
 
 async def initialize_rag():
-    rag = LightRAG(working_dir=WORKING_DIR)
+    rag = UraxLaw(working_dir=WORKING_DIR)
 
     await rag.initialize_storages()
     await initialize_pipeline_status()

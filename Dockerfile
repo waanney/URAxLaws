@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 # Copy pyproject.toml and source code for dependency installation
 COPY pyproject.toml .
 COPY setup.py .
-COPY lightrag/ ./lightrag/
+COPY uraxlaw/ ./uraxlaw/
 
 # Install dependencies
 ENV PATH="/root/.cargo/bin:${PATH}"
@@ -42,7 +42,7 @@ RUN pip install --upgrade pip setuptools wheel
 
 # Copy only necessary files from builder
 COPY --from=builder /root/.local /root/.local
-COPY ./lightrag ./lightrag
+COPY ./uraxlaw ./uraxlaw
 COPY setup.py .
 
 RUN pip install --use-pep517 ".[api]"
@@ -60,4 +60,4 @@ ENV INPUT_DIR=/app/data/inputs
 EXPOSE 9621
 
 # Set entrypoint
-ENTRYPOINT ["python", "-m", "lightrag.api.lightrag_server"]
+ENTRYPOINT ["python", "-m", "uraxlaw.api.uraxlaw_server"]

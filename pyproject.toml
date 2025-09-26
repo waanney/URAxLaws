@@ -3,12 +3,12 @@ requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lightrag-hku"
+name = "UraxLaw"
 dynamic = ["version"]
 authors = [
-    {name = "Zirui Guo"}
+    {name = "Ura Team"}
 ]
-description = "LightRAG: Simple and Fast Retrieval-Augmented Generation"
+description = "URA-xLaw: Legal Question-Answering for the State Bank of Vietnam"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
@@ -25,6 +25,7 @@ dependencies = [
     "configparser",
     "dotenv",
     "future",
+    "json-repair>=0.50.0",
     "nano-vectordb",
     "networkx",
     "numpy",
@@ -78,26 +79,26 @@ api = [
 ]
 
 [project.scripts]
-lightrag-server = "lightrag.api.lightrag_server:main"
-lightrag-gunicorn = "lightrag.api.run_with_gunicorn:main"
+uraxlaw-server = "uraxlaw.api.uraxlaw_server:main"
+uraxlaw-gunicorn = "uraxlaw.api.run_with_gunicorn:main"
 
 [project.urls]
-Homepage = "https://github.com/HKUDS/LightRAG"
-Documentation = "https://github.com/HKUDS/LightRAG"
-Repository = "https://github.com/HKUDS/LightRAG"
-"Bug Tracker" = "https://github.com/HKUDS/LightRAG/issues"
+Homepage = "https://github.com/waanney/UraxLaw"
+Documentation = "https://github.com/waanney/UraxLaw"
+Repository = "https://github.com/waanney/UraxLaw"
+"Bug Tracker" = "https://github.com/waanney/UraxLaw"
 
 [tool.setuptools.packages.find]
-include = ["lightrag*"]
+include = ["uraxlaw*"]
 
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.dynamic]
-version = {attr = "lightrag.__version__"}
+version = {attr = "uraxlaw.__version__"}
 
 [tool.setuptools.package-data]
-lightrag = ["api/webui/**/*"]
+uraxlaw = ["api/webui/**/*"]
 
 [tool.ruff]
 target-version = "py310"

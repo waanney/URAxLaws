@@ -1,0 +1,28 @@
+{{- if .Values.persistence.enabled }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "uraxlaw.fullname" . }}-rag-storage
+  labels:
+    {{- include "uraxlaw.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.persistence.ragStorage.size }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "uraxlaw.fullname" . }}-inputs
+  labels:
+    {{- include "uraxlaw.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.persistence.inputs.size }}
+{{- end }}

@@ -1,4 +1,4 @@
-# LightRAG
+# UraxLaw
 
 A lightweight Knowledge Graph Retrieval-Augmented Generation system with multiple LLM backend support.
 
@@ -14,13 +14,13 @@ A lightweight Knowledge Graph Retrieval-Augmented Generation system with multipl
 1. Clone the repository:
 ```bash
 # Linux/MacOS
-git clone https://github.com/HKUDS/LightRAG.git
-cd LightRAG
+git clone https://github.com/HKUDS/UraxLaw.git
+cd UraxLaw
 ```
 ```powershell
 # Windows PowerShell
-git clone https://github.com/HKUDS/LightRAG.git
-cd LightRAG
+git clone https://github.com/HKUDS/UraxLaw.git
+cd UraxLaw
 ```
 
 2. Configure your environment:
@@ -64,7 +64,7 @@ docker-compose up -d
 
 ### Configuration Options
 
-LightRAG can be configured using environment variables in the `.env` file:
+UraxLaw can be configured using environment variables in the `.env` file:
 
 #### Server Configuration
 - `HOST`: Server host (default: 0.0.0.0)
@@ -86,7 +86,7 @@ LightRAG can be configured using environment variables in the `.env` file:
 - `EMBEDDING_DIM`: Embedding dimensions
 
 #### Security
-- `LIGHTRAG_API_KEY`: API key for authentication
+- `URAXLAW_API_KEY`: API key for authentication
 
 ### Data Storage Paths
 
